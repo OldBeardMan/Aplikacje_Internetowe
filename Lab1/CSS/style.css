@@ -1,0 +1,24 @@
+h1, h2, h3 {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: rgb(68, 238, 133);
+    color:#00400e;
+}
+
+h1, #stopka {
+    background: #004013;
+    color: #8bff80;
+    text-align:center;
+}
+
+#menu {
+    background: #ffffff;
+    text-align: center;
+}
+
+#tresc{
+    background: #bee9ba;
+}

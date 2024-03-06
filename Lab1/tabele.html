@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
+        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+        <link rel="stylesheet" href="CSS/tabele.css" type="text/css" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> TABELE</title>
@@ -8,7 +10,7 @@
     <body>
         <div id="kontener">
             <div id="baner"><h1>Szybki kurs HTML</h1></div>
-            <div id="menu"><a href="Lab1.html">Podstawowe znaczniki</a> <a href="tabele.html">Tworzenie tabel</a> <a href="formularze.html">Budowa formularzy</a></div>
+            <div id="menu"><a href="index.html">Podstawowe znaczniki</a> <a href="tabele.html">Tworzenie tabel</a> <a href="formularze.html">Budowa formularzy</a></div>
             <div id="tresc">
                 <h2>Podstawowe znaczniki do tworzenia tabel:</h2>
                 <ul>
@@ -22,7 +24,7 @@
                     <li>&lt;th&gt; - komórka nagłówkowa tabeli (również zawarta w wierszu)</li>
                 </ul>
                 <h2>Przykładowa tabela HTML:</h2>
-                <table border="1">
+                <table>
                     <caption>Popularność języków programowania</caption>
                         <thead>
                             <tr>
@@ -40,7 +42,7 @@
                                 <td>1</td>
                                 <td>2</td>
                             </tr>
-                            <tr>
+                            <tr class="parzysty">
                                 <td>C</td>
                                 <td>2</td>
                                 <td>1</td>
@@ -50,7 +52,7 @@
                                 <td>3</td>
                                 <td>7</td>
                             </tr>
-                            <tr>
+                            <tr class="parzysty">
                                 <td>C++</td>
                                 <td>4</td>
                                 <td>4</td>
@@ -63,7 +65,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan = "3">Na podstawie: https://www.tiobe.com/tiobe-index/ </td>
+                                <td colspan = "3"><a href="https://mattkrupa.net">Na podstawie: https://www.tiobe.com/tiobe-index/</a> </td>
                             </tr>
                         </tfoot>
                     </table>
