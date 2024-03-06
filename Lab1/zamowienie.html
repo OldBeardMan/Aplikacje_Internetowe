@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kreator pizzy </title>
+    </head>
+    <body>
+        <div id="kontener">
+            <div id="baner"><h1>Kreator pizzy</h1></div>
+            <div>
+                <form action="mailto:beatap@cs.pollub.pl" method="post">
+                    <div id="rozmiar" style="border: thick solid black">
+                        <b> Rozmiar:</b> <br> <br>
+                        <input type="radio" name="karta" value="ec"> Mała
+                        <input type="radio" name="karta" value="vi"> Średnia
+                        <input type="radio" name="karta" value="pb"> Duża<br> <br>
+                    </div> <br>
+                    <div id="dodatki" style="border: thick solid black">
+                        <b> Dodatki:</b> <br> <br>
+                        <input type="checkbox" name="szyna" value="szyna"> Szynka <br>
+                        <input type="checkbox" name="salami" value="salami"> Salami <br>
+                        <input type="checkbox" name="boczo" value="boczo"> Boczek <br>
+                        <input type="checkbox" name="papr" value="papr"> Papryka <br>
+                        <input type="checkbox" name="pomido" value="pomido"> Pomidor <br>
+                        <input type="checkbox" name="ser" value="ser"> Ser <br> <br>
+                    </div> <br>
+                    <div id="sosy" style="border: thick solid black">
+                        <b> Sosy:</b> <br> <br>
+                        Wybierz sos: <select size="4" name="sosik" multiple="multiple">
+                            <option value="t">Pomidorowy</option>
+                            <option value="m">Czosnkowy</option>
+                            <option value="f">Ketchup</option>
+                            <option value="s">Tatarski</option>
+                            <option value="i">Majonez</option>
+                            </select><br> <br>
+                        Inne uwagi: <textarea cols="100" rows="10" name="uwagi">
+                            </textarea><br> <br>
+                        </div> <br>
+                    <input type="reset" value="Wyczyść dane"> 
+                    <input type="submit" value="Wyślij zamówienie"><br> 
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
