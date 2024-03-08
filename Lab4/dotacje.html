@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularz Dotacji</title>
+</head>
+<body>
+
+    <h1>Formularz dotacji</h1>
+
+    <form>
+
+    <fieldset>
+
+    <label for="beneficiary">Beneficjent:</label>
+    <input type="text" id="beneficiary" name="beneficiary" list="organizations" required>
+    <datalist id="organizations">
+      <option value="WOŚP">
+      <option value="Caritas">
+      <option value="Janusz pomaga">
+    </datalist>
+
+    <br>
+
+    <label for="grantSize">Wielkość dotacji (min. 20):</label>
+    <input type="number" id="grantSize" name="grantSize" min="20" step="5" title="Wprowadź wielkość" required>
+    
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+    <legend>Dane karty płatniczej</legend>
+
+    <label>Karta:</label>
+    <input type="radio" id="visa" name="cardType" value="Visa" required>
+    <label for="visa">Visa</label>
+    <input type="radio" id="mastercard" name="cardType" value="MasterCard" required>
+    <label for="mastercard">MasterCard</label>
+
+    <br>
+
+    <label for="cardNumber">Numer karty:</label>
+    <input type="text" id="cardNumber" name="cardNumber" pattern="\d{13}|\d{16}" title="Wprowadź 13 lub 16 cyfr" required>
+
+    <br>
+
+    <label for="expiryDate">Data ważności karty:</label>
+    <input type="month" id="expiryDate" name="expiryDate" required min="2024-03" max="2030-12" title="Wprowadź rok i miesiąc">
+
+    <br>
+
+    <label for="cvv">Kod CVV (3 lub 4 cyfry):</label>
+    <input type="text" id="cvv" name="cvv" pattern="\d{3,4}" title="Wprowadź 3 lub 4 cyfry" required>
+
+    </fieldset>
+
+    <br>
+
+    <label for="donor">Darczyńca (min. 3 znaki):</label>
+    <input type="text" id="donor" name="donor" pattern=".{3,}" title="Wprowadź co najmniej 3 znaki" required>
+
+    <br>
+
+    <button type="submit">Prześlij dotację</button>
+  </form>
+
+</body>
+</html>
