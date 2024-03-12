@@ -9,22 +9,24 @@
     </head>
     <body>
         <div id="kontener">
-            <div id="baner"><h1>Szybki kurs HTML</h1></div>
-            <div id="menu">
-                <ul id="nav">
-                    <li><a href="index.html">Podstawy</a></li>
-                    <li><a href="tabele.html">Tabele</a></li>
-                    <li>
-                        <a href="">Formularze</a>
-                        <ul>
-                            <li><a href="formularze.html" >Pola formularza</a></li>
-                            <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="galeria.html" title="">Galeria</a></li>
-                </ul>
-            </div>
-            <div id="tresc">
+            <header>
+                <h1>Szybki kurs HTML</h1>
+                <nav>
+                    <ul id="nav">
+                        <li><a href="index.html">Podstawy</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li>
+                            <a href="">Formularze</a>
+                            <ul>
+                                <li><a href="formularze.html" >Pola formularza</a></li>
+                                <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="galeria.html" title="">Galeria</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="tresc">
                 <h2>Podstawowe znaczniki formularza HTML to:</h2>
                 <ul>
                     <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
@@ -35,27 +37,27 @@
                 </ul>
                 <h2 class="kurs">Przykładowy formularz HTML:</h2>
                 <form action="mailto:beatap@cs.pollub.pl" method="post"> <br>
-                    <label>Nazwisko:</label>  <input type="text" name="nazwisko" size="30"> <br>
-                    <label>Wiek:</label>      <input type="text" name="wiek" size="30"> <br>
-                    <label>Państwo</label>    <select name="panstwo" id="panstwo">
+                    <label>Nazwisko:</label>  <input type="text" name="nazwisko" size="30" placeholder="Imie" title="Wpisz imię" pattern="[A-Za-z]{1,32}" required> <br>
+                    <label>Wiek:</label>      <input type="text" name="wiek" size="30" placeholder="Nazwisko" title="Wpisz nazwisko" pattern="[A-Za-z]{1,32}" required> <br>
+                    <label>Państwo</label>    <select name="panstwo" id="panstwo" title="Wybierz państwo w którym mieszkasz" required>
                                     <option value="Polska">Polska</option>
                                     <option value="Kongo">Republika Kongo</option>
                                     <option value="Somalia">Somalia</option>
                                 </select> <br>
-                    <label>E-mail:</label>    <input type="email" name="e-mail" size="30"> <br> <br>
+                    <label>E-mail:</label>    <input type="email" name="e-mail" size="30" placeholder="E-mail" title="Wpisz swój adres e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required> <br> <br>
                     <b>Zamawiam tutorial z języka:</b> <br> <br>
                     <input type="checkbox" name="PJP" value="PHP"> <label>PHP</label>
                     <input type="checkbox" name="C" value="C"> <label>C/C++</label>
                     <input type="checkbox" name="JAVA" value="JAVA"> <label>JAVA</label> <br> <br>
                     <b>Sposób zapłaty:</b> <br> <br>
-                    <input type="radio" name="karta" value="ec"> <label>eurocard</label>
-                    <input type="radio" name="karta" value="vi"> <label>visa</label>
-                    <input type="radio" name="karta" value="pb"> <label>przelew bankowy</label><br><br>
+                    <input type="radio" name="karta" value="ec" required> <label>eurocard</label>
+                    <input type="radio" name="karta" value="vi" required> <label>visa</label>
+                    <input type="radio" name="karta" value="pb" required> <label>przelew bankowy</label><br><br>
                     <input type="submit" value="Wyślij">
                     <input type="reset" value="Anuluj"> <br> 
                 </form>
-            </div>
-            <div id="pasek">
+            </section>
+            <aside>
                 <div class="box">
                     <h3>Walidatory:</h3>
                     <ul>
@@ -72,8 +74,8 @@
                         <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
                     </ul>
                 </div>
-            </div>
-            <div id="stopka">&copy;BP</div>
+            </aside>
+            <footer>&copy;BP</footer>
         </div>
     </body>
 </html>

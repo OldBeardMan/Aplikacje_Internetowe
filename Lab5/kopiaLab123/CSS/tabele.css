@@ -26,6 +26,6 @@ tfoot a{
     color:white;
 }
 
-.parzysty{
+tr:nth-child(even of .lang){
     background: white;
 }
