@@ -1,0 +1,22 @@
+form{
+    text-align: center;
+    background: rgb(49, 82, 36);
+    width: 94%;
+    margin: 2%;
+    border: 5pt rgb(0, 0, 0) solid;
+}
+
+label, b{
+    color:white;
+    font-style: oblique;
+    font-size: 120%;
+}
+
+.kurs{
+    text-align: center;
+}
+
+button{
+    align-items: center;
+}
+

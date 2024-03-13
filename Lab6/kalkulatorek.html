@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="kalkulatorek.css" type="text/css" />
+  <script src="kalkulatorek.js"></script>
+  <title>Kalkulatorek</title>
+</head>
+<body>
+
+    <form>
+
+    <fieldset>
+    <legend>Kalkulatorek</legend>
+
+      <div class="box">
+        <h2>Wpisz liczby:</h2>
+        <label>X:</label> <br>
+        <input id="X" required> <br>
+        <label>Y:</label> <br>
+        <input id="Y" required> <br>
+        <button type="button" onclick="oblicz()">Oblicz</button> <br>
+      </div>
+
+      <div class="box">
+        <h2>Wskaż działanie:</h2>
+        <input type="radio" id="+" name="Type" value="+" required> <label>+</label> <br>
+        <input type="radio" id="-" name="Type" value="-" required> <label>-</label> <br>
+        <input type="radio" id="*" name="Type" value="*" required> <label>*</label> <br>
+        <input type="radio" id="/" name="Type" value="/" required> <label>/</label> <br>
+        <label>Wynik: </label><input id="wynik" disabled value="">
+      </div>
+
+    </fieldset>
+
+  </form>
+
+</body>
+</html>
