@@ -1,0 +1,31 @@
+form{
+    text-align: center;
+    color: aquamarine;
+    background: rgb(49, 82, 36);
+    width: 94%;
+    margin: 2%;
+    border: 5pt rgb(0, 0, 0) solid;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label, b{
+    color:white;
+    font-style: oblique;
+    font-size: 120%;
+}
+
+.kurs{
+    text-align: center;
+}
+
+button{
+    align-items: center;
+}
+
+.czerwone {
+    color:red;
+}

@@ -1,0 +1,15 @@
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 10pc;
+    height: auto;
+}
+
+#gal{
+    align-items: center;
+    float: center;
+    list-style: none;
+    columns: 3;
+}

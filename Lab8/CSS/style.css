@@ -1,0 +1,172 @@
+h1, h2, h3 {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: rgb(68, 238, 133);
+    color:#00400e;
+}
+
+h1, footer {
+    background: #004013;
+    color: #8bff80;
+    text-align:center;
+}
+
+#kontener {
+    background:#ffffff;
+    }
+
+header {
+    background: #ffffff;
+    float:left;
+    width: 100%;
+    padding: 0;
+    border-bottom:2px solid #00a008;
+}
+
+header li {
+    float:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+    padding-right:3px;
+    font-family:"Lucida Grande", sans-serif;
+    font-size:85%;
+}
+
+header a {
+    float:left;
+    display:block;
+    margin:0;
+    padding:4px 8px;
+    color:#ffffd7;
+    text-decoration:none;
+    border: 1px solid #00a008;
+    border-bottom:none;
+    background:#018a18;
+}
+
+header a:hover {
+    background:#004013;
+    color:#ffffff;
+    text-decoration:none;
+}
+
+nav {
+    text-align: left;
+    overflow: hidden;
+    font-family: calibri, tahoma;
+}
+
+ul#nav li {
+    border: 1px solid #d5d5d5;
+    list-style-type: none;
+    display: flexbox;
+    background: #98bed8;
+    margin-left: 3px;
+}
+
+ul#nav li:hover {
+    border: 1px solid #d5d5d5;
+    list-style-type: none;
+    display: flexbox;
+    background: #f0f0f0;
+    margin-left: 3px;
+}
+
+ul#nav li a {
+    display : block;
+    padding : 4pt;
+    text-decoration : none;
+}
+
+ul#nav li li a {
+    width: 160px;
+}
+
+ul#nav li li:hover {
+    background: white;
+}
+
+ul#nav li ul {
+    overflow: hidden;
+    display: none;
+}
+
+ul#nav li:hover ul {
+    position: absolute;
+    background: #aaa;
+    padding: 0;
+    display: block;
+    width: 177px;
+}
+
+#tresc{
+    background: #bee9ba;
+    float:left; 
+    width:75%;
+    padding:1%;
+}
+
+footer{
+    clear:both;
+    width:100%;
+    padding:5px 0 5px 0;
+    text-align:center;
+}
+
+aside {
+    float:right; 
+    width:20%;
+    padding:1%;
+}
+
+*.box { 
+    box-sizing: border-box;
+    background:#00400e;
+    color:#8bff80;
+    padding:5px;
+    margin:5px;
+    font-size:90%;
+    border-radius: 1pc;
+    box-shadow: 8px 8px 5px black;
+}
+
+*.box a {
+    color:#ffffb0
+}
+
+@media screen and (max-width: 720px) {
+
+    #tresc{
+        align-items: center;
+        width: 100%;
+    }
+
+    body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        font-size: 180%;
+    }
+
+    ul#nav li li a {
+        width: 100%;
+    }
+
+    aside {
+        align-items: center;
+        order: 3;
+        padding: 25%;
+        width: 50%;
+    }
+}

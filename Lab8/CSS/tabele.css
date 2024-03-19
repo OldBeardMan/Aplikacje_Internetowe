@@ -1,0 +1,31 @@
+table{
+    background: rgb(223, 221, 100);
+    text-align: center;
+    width: 94%;
+    margin: 2%;
+    border: 1pt rgb(14, 99, 14) solid;
+}
+
+caption{
+    font-size: 120%;
+    font-style: oblique;
+}
+
+thead, tfoot{
+    background:rgb(14, 99, 14);
+    color: white;
+    font-size: 110%;
+    padding: 5pt;
+}
+
+td, th{
+    border: 1pt solid rgb(14, 99, 14)
+}
+
+tfoot a{
+    color:white;
+}
+
+tr:nth-child(even of .lang){
+    background: white;
+}
