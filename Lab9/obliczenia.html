@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+        <link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/funkcja.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title> OBLICZENIA </title>
+    </head>
+    <body>
+        <div id="kontener">
+            <header>
+                <h1>Szybki kurs HTML</h1>
+                <nav>
+                    <ul id="nav">
+                        <li><a href="index.html">Podstawy</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li>
+                            <a href="">Formularze</a>
+                            <ul>
+                                <li><a href="formularze.html" >Pola formularza</a></li>
+                                <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="galeria.html" title="">Galeria</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="tresc">
+                <script>
+                    $(document).ready(function () {
+                    $('.zielony').css('background', '#8bff80');
+                    $('#tresc').css('background', 'grey');
+                    $('#tresc').css('font-weight', 'bold');
+                    });
+                </script>
+                <div><h3>Obliczanie raty</h3>
+                    <table><tbody>
+                    <tr><td>Kwota pożyczki:</td><td><input id="K"></td> </tr>
+                    <tr><td>Oprocentowanie roczne:</td><td><input id="pr"></td> </tr>
+                    <tr><td>Liczba rat:</td><td><input id="n"></td> </tr>
+                    <tr><td>Rata miesięczna:</td><td><input id="rata" disabled value="" class="zielony"></td></tr>
+                    <tr><td>Kwota z odsetkami::</td><td><input id="suma" disabled value="" class="zielony"></td></tr>
+                    </tbody></table>
+                    <button class="oblicz">Oblicz</button>
+                    <script>
+                        $('.oblicz').click(function(){
+                            pozyczka();
+                        });
+                    </script>
+                </div>
+            </section>
+            <aside>
+                <div class="box">
+                    <h3>Walidatory:</h3>
+                    <ul>
+                        <li> <a href="http://validator.w3.org/">HTML </a></li>
+                        <li> <a href="http://jigsaw.w3.org/css-validator/">CSS</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Kursy:</h3>
+                    <ul>
+                        <li> <a href="https://www.w3schools.com/html/"> HTML </a></li>
+                        <li> <a href="https://www.w3schools.com/css/"> CSS </a></li>
+                        <li> <a href="https://www.w3schools.com/js/"> JS </a></li>
+                        <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
+                    </ul>
+                </div>
+            </aside>
+            <footer>&copy;BP</footer>
+        </div>
+    </body>
+</html>

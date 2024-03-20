@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title> Szybki kurs HTML</title>
+    </head>
+    <body>
+        <div id="kontener">
+            <header>
+
+                <div class="carousel">
+                    <div><img src="photo/baner1.jpg" alt="Image 1"></div>
+                    <div><img src="photo/baner2.jpg" alt="Image 2"></div>
+                    <div><img src="photo/baner3.jpg" alt="Image 3"></div>
+                </div>  
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+                <script>
+                  $(document).ready(function(){
+                    $('.carousel').slick({
+                      autoplay: true, // Automatyczne przewijanie
+                      autoplaySpeed: 3000, // Czas wyświetlania obrazów (w milisekundach)
+                      arrows: false, // Ukryj strzałki nawigacyjne (możesz je włączyć, jeśli chcesz)
+                      dots: true // Pokaż punkty nawigacyjne (opcjonalnie)
+                    });
+                  });
+                </script>
+                  
+                <h1>Szybki kurs HTML</h1>
+                <nav>
+                    <ul id="nav">
+                        <li><a href="index.html">Podstawy</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li>
+                            <a href="">Formularze</a>
+                            <ul>
+                                <li><a href="formularze.html" >Pola formularza</a></li>
+                                <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="galeria.html" title="">Galeria</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="tresc">
+                <h2>Podstawowe znaczniki HTML to:</h2>
+                <ul>
+                    <li>&lt;html&gt; - korzeń dokumentu</li>
+                    <li>&lt;head&gt; - nagłówek strony z informacjami dla przeglądarek</li>
+                    <li>&lt;body&gt; - właściwa treść dokumentu widoczna w oknie przeglądarki</li>
+                    <li>&lt;div&gt; - element blokowy</li>
+                    <li>&lt;p&gt; - akapit</li>
+                    <li>&lt;ol&gt;,&lt;ul&gt; i &lt;li&gt; - elementy listy wypunktowanej lub numerowanej</li>
+                    <li>&lt;img&gt; - obrazek</li>
+                    <li>&lt;a&gt; - hiperłącze</li>
+                </ul>
+                <a href="https://validator.w3.org/"><p>HTML walidator <img src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg" alt="Logo"></p></a>
+            </section>
+            <aside>
+                <div class="box">
+                    <h3>Walidatory:</h3>
+                    <ul>
+                        <li> <a href="http://validator.w3.org/">HTML </a></li>
+                        <li> <a href="http://jigsaw.w3.org/css-validator/">CSS</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Kursy:</h3>
+                    <ul>
+                        <li> <a href="https://www.w3schools.com/html/"> HTML </a></li>
+                        <li> <a href="https://www.w3schools.com/css/"> CSS </a></li>
+                        <li> <a href="https://www.w3schools.com/js/"> JS </a></li>
+                        <li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
+                    </ul>
+                </div>
+            </aside>
+            <footer>&copy;BP</footer>
+        </div>
+    </body>
+</html>
