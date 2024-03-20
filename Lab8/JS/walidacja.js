@@ -84,7 +84,30 @@ function sprawdz(){
     }
     else document.getElementById("zaplata_error").innerHTML="";
 
+    if (ok==true){
 
+        var dane="Dane z wypełnionego przez Ciebie formularza:\n";
+        dane+="Naziwsko: "+document.getElementById('nazw').value+"\n"+
+        "Wiek: "+document.getElementById('wiek').value+"\n"+
+        "Kraj: "+document.getElementById('kraj').value+"\n"+
+        "Email: "+document.getElementById('email').value+"\n"+
+        "Zamówione kursy: ";
+        if (sprawdz_box("php")) {
+            dane+=document.getElementById('php').value+" ";}
+        if (sprawdz_box("c")) {
+            dane+=document.getElementById('c').value+" ";}
+        if (sprawdz_box("java")) {
+            dane+=document.getElementById('java').value;}
+        dane+="\n"+"Sposób zapłaty: ";
+        if (document.getElementById('euro').checked){
+            dane+=document.getElementById('euro').value;}
+        if (document.getElementById('visa').checked){
+            dane+=document.getElementById('visa').value;}
+        if (document.getElementById('przelew').checked){
+            dane+=document.getElementById('przelew').value;}
+        if (window.confirm(dane)) ok=true;
+        else return ok=false;
+    }
 
     return ok;
 
