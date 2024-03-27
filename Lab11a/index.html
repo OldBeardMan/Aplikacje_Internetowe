@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Web Storage</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+            <h1>Koszyczek</h1>
+        <form>
+            <label>Nazwa produktu:</label>
+            <input type="text" id="nazwa" name="nazwa" required>
+            <label>Cena:</label>
+            <input type="text" id="cena" name="cena" required>
+            <label>Kolor:</label>
+            <input type="text" id="kolor" name="kolor" required>
+            <label>Liczba sztuk</label>
+            <input type="text" id="liczbasztuk" name="liczbasztuk" required>
+        
+            <br> <br>
+
+            <button onclick="saveCart()">Zapisz produkt do koszyka</button>
+            <button onclick="showCart()">Wyświetl koszyk</button>
+            <button onclick="clearCart()">Usuń wszystkie produkty</button>
+
+            <h2>Twój koszyk</h2>
+            <ul id="cartList"></ul>
+
+        </form>
+    </body>
+</html>

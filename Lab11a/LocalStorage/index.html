@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Web Storage</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+            <h1>Test localStorage</h1>
+        <form>
+            <label>Kod koloru:</label>
+            <input type="text" id="hexColorInput" name="colorCode" required>
+            <label>Nazwa koloru:</label>
+            <input type="text" id="colorNameInput" name="colorName" required>
+        
+            <br> <br>
+
+            <button onclick="saveColorPair()">Zapisz parę</button>
+            <button onclick="showAllPairs()">Pokaż wszystkie pary</button>
+            <button onclick="clearStorage()">Usuń dane</button>
+
+            <h2>Zapisane pary kolorów</h2>
+            <ul id="colorList"></ul>
+
+        </form>
+    </body>
+</html>
