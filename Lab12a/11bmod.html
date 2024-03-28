@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+    <script>
+        class Cart {
+            constructor() {
+                this.products = [];
+            }
+
+            saveProduct() {
+                const productName = document.getElementById('nazwa').value;
+                const productPrice = document.getElementById('cena').value;
+                const productColor = document.getElementById('kolor').value;
+                const productQuantity = document.getElementById('liczbasztuk').value;
+
+                const product = {
+                    name: productName,
+                    price: productPrice,
+                    color: productColor,
+                    quantity: productQuantity
+                };
+
+                this.products.push(product);
+                localStorage.setItem('cart', JSON.stringify(this.products));
+            }
+
+            displayCart() {
+                const cartList = document.getElementById('cartList');
+                cartList.innerHTML = '';
+
+                const storedCart = JSON.parse(localStorage.getItem('cart'));
+                if (storedCart) {
+                    storedCart.forEach(product => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `Nazwa: ${product.name}, Cena: ${product.price}, Kolor: ${product.color}, Liczba sztuk: ${product.quantity}`;
+                        cartList.appendChild(listItem);
+                    });
+                } else {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = 'Koszyk jest pusty';
+                    cartList.appendChild(listItem);
+                }
+            }
+
+            clearCart() {
+                localStorage.removeItem('cart');
+                this.products = [];
+                const cartList = document.getElementById('cartList');
+                cartList.innerHTML = '';
+            }
+
+            searchProduct() {
+                const searchInput = document.getElementById('searchInput').value.toLowerCase();
+                const storedCart = JSON.parse(localStorage.getItem('cart'));
+                const filteredCart = storedCart.filter(product => product.name.toLowerCase().includes(searchInput));
+
+                const cartList = document.getElementById('cartList');
+                cartList.innerHTML = '';
+
+                filteredCart.forEach(product => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Nazwa: ${product.name}, Cena: ${product.price}, Kolor: ${product.color}, Liczba sztuk: ${product.quantity}`;
+                    cartList.appendChild(listItem);
+                });
+            }
+        }
+
+        const cart = new Cart();
+    </script>
+</head>
+<body>
+    <h1>Koszyczek</h1>
+    <form>
+        <label>Nazwa produktu:</label>
+        <input type="text" id="nazwa" name="nazwa" required>
+        <label>Cena:</label>
+        <input type="text" id="cena" name="cena" required>
+        <label>Kolor:</label>
+        <input type="text" id="kolor" name="kolor" required>
+        <label>Liczba sztuk</label>
+        <input type="text" id="liczbasztuk" name="liczbasztuk" required>
+    
+        <br> <br>
+
+        <button type="button" onclick="cart.saveProduct()">Zapisz produkt do koszyka</button>
+        <button type="button" onclick="cart.displayCart()">Wyświetl koszyk</button>
+        <button type="button" onclick="cart.clearCart()">Usuń wszystkie produkty</button>
+
+        <h2>Twój koszyk</h2>
+        <input type="text" id="searchInput" placeholder="Szukaj produktu...">
+        <button type="button" onclick="cart.searchProduct()">Szukaj</button>
+        <ul id="cartList"></ul>
+    </form>
+</body>
+</html>

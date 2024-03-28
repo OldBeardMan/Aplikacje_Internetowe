@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularz rejestracji</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        class User {
+            constructor(email = "", login = "user", pass = "user") {
+                this.login = login;
+                this.pass = pass;
+                this.email = email;
+            }
+            pokaz() {
+                return "Dane użytkownika: login: " + this.login + ", email: " + this.email;
+            }
+            formularzRejestracji() {
+                var formularz = "";
+                formularz += '<form id="registrationForm">';
+                formularz += '<label for="email">Email:</label>';
+                formularz += '<input type="email" id="email" name="email" required><br><br>';
+                formularz += '<label for="login">Login:</label>';
+                formularz += '<input type="text" id="login" name="login" required><br><br>';
+                formularz += '<label for="pass">Hasło:</label>';
+                formularz += '<input type="password" id="pass" name="pass" required><br><br>';
+                formularz += '<button type="submit">Zarejestruj</button></form>';
+                return formularz;
+            }
+            zapiszDoLocalStorage() {
+                localStorage.setItem(this.login, JSON.stringify(this));
+            }
+            static pobierzZLocalStorage(login) {
+                const storedUser = localStorage.getItem(login);
+                return storedUser ? new User().wczytaj(JSON.parse(storedUser)) : null;
+            }
+            wczytaj(userData) {
+                this.login = userData.login;
+                this.pass = userData.pass;
+                this.email = userData.email;
+                return this;
+            }
+            static czyLoginIstnieje(login) {
+                return localStorage.getItem(login) !== null;
+            }
+            static czyEmailIstnieje(email) {
+                for (var i = 0; i < localStorage.length; i++) {
+                    var key = localStorage.key(i);
+                    var user = User.pobierzZLocalStorage(key);
+                    if (user && user.email === email) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var formularzDiv = document.getElementById('formularz');
+            var info = document.getElementById('info');
+
+            // Wyświetlenie formularza rejestracji
+            var user = new User();
+            formularzDiv.innerHTML = user.formularzRejestracji();
+
+            // Nasłuchiwanie na przesłanie formularza
+            document.getElementById('registrationForm').addEventListener('submit', (event) => {
+                event.preventDefault(); // Zapobiegamy domyślnej akcji formularza (przeładowaniu strony)
+
+                // Pobieramy dane z formularza
+                var email = document.getElementById('email').value;
+                var login = document.getElementById('login').value;
+                var pass = document.getElementById('pass').value;
+
+                // Sprawdzamy czy login lub email istnieje już w Local Storage
+                if (User.czyLoginIstnieje(login)) {
+                    info.textContent = "Użytkownik o podanym loginie już istnieje.";
+                } else if (User.czyEmailIstnieje(email)) {
+                    info.textContent = "Użytkownik o podanym adresie email już istnieje.";
+                } else {
+                    // Aktualizujemy obiekt użytkownika
+                    user.email = email;
+                    user.login = login;
+                    user.pass = pass;
+
+                    // Zapisujemy obiekt użytkownika w Local Storage
+                    user.zapiszDoLocalStorage();
+
+                    // Wyświetlamy informację o poprawnym zapisie użytkownika
+                    info.textContent = "Użytkownik zarejestrowany pomyślnie: " + user.pokaz();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Rejestracja nowego użytkownika</h2>
+        <!-- Formularz rejestracji -->
+        <div id='formularz'></div>
+        <!-- Wyświetlanie danych użytkownika -->
+        <div id='info'></div>
+    </div>
+</body>
+</html>
