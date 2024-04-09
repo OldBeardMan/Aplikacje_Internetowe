@@ -250,7 +250,7 @@ sup {
 
 a {
   color: var(--bs-link-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -11113,8 +11113,9 @@ body {
 
 .about-section {
   padding-top: 10rem;
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, #000000 0%, #000000 70%, #212529 100%);
 }
+
 .about-section p {
   margin-bottom: 5rem;
 }
@@ -11200,4 +11201,22 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+/*MOJE EHEHEHE*/
+
+.album-link {
+  color: inherit;
+}
+
+.album-link .album-img {
+  transition: transform 0.3s ease-in-out; /* Dodaj przejście efektu */
+}
+
+.album-link:hover .album-img {
+  transform: scale(1.05); /* Powiększ obrazek po najechaniu kursorem */
+}
+
+.album-img {
+  margin-bottom: 20px; 
 }
