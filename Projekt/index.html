@@ -14,21 +14,21 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/discordInvite.css" rel="stylesheet">
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        <!-- Nawigacja-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Matt Krupa</a>
+                <a class="navbar-brand" href="#page-top">Matt Krupa</a> <!--Tytuł w lewnym górnym rogu-->
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto"> <!--Nawigacja po stronie tytułowej, donoścniki do id sekcji-->
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#albums">Music</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
                     </ul>
                 </div>
@@ -38,18 +38,18 @@
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
-                    <div class="text-center">
+                    <div class="text-center"> <!--Tytułowy baner tytułowy-->
                         <h1 class="mx-auto my-0 text-uppercase">Matt Krupa</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Ambient, electronic and acoustic music. Sometimes a singer too.</h2>
-                        <a class="btn btn-secondary" href="#about">Get to know him</a>
-                    </div>
+                        <a class="btn btn-secondary" href="#about">Get to know him</a> <!--Odnośnik do rozwinięcia-->
+                    </div><!--Odnośnik do rozwinięcia-->
                 </div>
             </div>
         </header>
-        <!-- About-->
+        <!-- Rozwinięcie na temat artysty-->
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center"> <!--Wyśrodkowanie-->
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">Hi, I'm Matt and I make music.</h2>
                         <p class="text-white-50">
@@ -60,44 +60,47 @@
                 </div>
             </div>
         </section>
-<!-- Album Section -->
-<section class="projects-section bg-dark text-white" id="albums">
+
+<!-- sekcja albumów -->
+<section class="projects-section bg-secondary text-white" id="albums">
     <div class="container px-4 px-lg-5">
-        <!-- Album Header -->
+
+        <!-- Albumy tytuł-->
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
                 <h2 class="mt-0">All of my work</h2>
-                <p class="text-muted">Feel free to listen to any of it on this site</p>
-                <hr class="light my-4" />
+                <p class="text-warning">Feel free to listen to any of it on this site</p>
+                <hr class="light my-4" /> <!--Tutaj ten pasek odnielający tytuł od albumów-->
             </div>
         </div>
-        <!-- Album Grid -->
-        <div class="row gx-4 gy-4 justify-content-center">
-            <div class="col-lg-3 col-md-6 text-center">
+
+        <!-- Tabela z albumami -->
+        <div class="row gx-4 gy-4 justify-content-center"> <!--Div do wszystkich albumów środkujący-->
+            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla poszczególnego albumu, aby się razem ułożyły ładnie-->
                 <a href="iceland" class="album-link">
                     <img class="img-fluid album-img" src="assets/img/Iceland.png" alt="Iceland">
                     <h3>Iceland</h3>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla poszczególnego albumu, aby się razem ułożyły ładnie-->
                 <a href="norway" class="album-link">
                     <img class="img-fluid album-img" src="assets/img/Norway.png" alt="Norway">
                     <h3>Norway</h3>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla poszczególnego albumu, aby się razem ułożyły ładnie-->
                 <a href="winter" class="album-link">
                     <img class="img-fluid album-img" src="assets/img/Winter.jpg" alt="Winter">
                     <h3>Winter</h3>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla poszczególnego albumu, aby się razem ułożyły ładnie-->
                 <a href="coversvol1" class="album-link">
                     <img class="img-fluid album-img" src="assets/img/Vol1.jpg" alt="Covers Vol.1">
                     <h3>Covers Vol.1</h3>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla poszczególnego albumu, aby się razem ułożyły ładnie-->
                 <a href="intheautumnforest" class="album-link">
                     <img class="img-fluid album-img" src="assets/img/Autumn.jpg" alt="In The Autumn Forest">
                     <h3>In The Autumn Forest</h3>
@@ -108,21 +111,44 @@
 </section>
 
 
+<section class="projects-section bg-black text-white" id="projects">
+    <div class="container px-4 px-lg-5">
+        <!-- Inne projekty tytuł-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">My other projects</h2>
+                <p class="text-muted">See my other music projects and listen to them as well!</p>
+                <hr class="light my-4" /> <!--Paseczek-->
+            </div>
+        </div>
 
-        <!-- Signup-->
+
+        <!-- Inee projekty -->
+        <div class="row gx-4 gy-4 justify-content-center"> <!--Div dla projektów muzycznych analogicznie jak z albumami-->
+            <div class="col-lg-3 col-md-6 text-center"> <!--Poszczególny projekt-->
+                <a href="iceland" class="album-link"> <!--Odnośnik do podstrony-->
+                    <img class="rounded-circle shadow-4-strong img-fluid album-img" src="assets/img/Iceland.png" alt="Iceland"> <!--Obrazek-->
+                    <h3>Blooming Cactus</h3> <!--Nazwa-->
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla innego projektu muzycznego-->
+                <a href="norway" class="album-link">
+                    <img class="rounded-circle shadow-4-strong img-fluid album-img" src="assets/img/Norway.png" alt="Norway">
+                    <h3>Carmelis</h3>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+        <!-- Tutaj będzie formularz zawierający wysłanie wiadomości-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
+                        <h2 class="text-white mb-5">Send me a message!</h2>
                         <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Email address input-->
                             <div class="row input-group-newsletter">
@@ -138,9 +164,6 @@
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3 mt-2 text-white">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -153,48 +176,13 @@
                 </div>
             </div>
         </section>
-        <!-- Contact-->
-        <section class="contact-section bg-black">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">+1 (555) 902-8832</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="social d-flex justify-content-center">
+        
+        <!--                <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
                 </div>
-            </div>
-        </section>
+            -->
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
         <!-- Bootstrap core JS-->
