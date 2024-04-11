@@ -52,3 +52,17 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+        // Skrypt JavaScript do zmiany tła w zależności od podstrony
+        // Załóżmy, że mamy zmienne globalne lub inny sposób określania aktualnej podstrony
+
+        // Zakładając, że mamy zmienną currentPage, która zawiera nazwę aktualnej podstrony
+        // Możemy zmienić zmienną CSS w zależności od tej wartości
+
+        // Przykład:
+        var currentPage = "home"; // Przykładowa wartość, można ją ustawić na aktualną podstronę
+
+        if (currentPage === "home") {
+            document.documentElement.style.setProperty('--bg-image', 'url("../assets/img/bg-home.jpg")');
+        } else if (currentPage === "about") {
+            document.documentElement.style.setProperty('--bg-image', 'url("../assets/img/bg-about.jpg")');
+        }

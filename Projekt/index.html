@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
-        <meta name="author" content="" />
         <title>Matt Krupa</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -77,7 +76,7 @@
         <!-- Tabela z albumami -->
         <div class="row gx-4 gy-4 justify-content-center"> <!--Div do wszystkich albumów środkujący-->
             <div class="col-lg-3 col-md-6 text-center"> <!--Div dla poszczególnego albumu, aby się razem ułożyły ładnie-->
-                <a href="iceland" class="album-link">
+                <a href="iceland.html" class="album-link">
                     <img class="img-fluid album-img" src="assets/img/Iceland.png" alt="Iceland">
                     <h3>Iceland</h3>
                 </a>
@@ -166,6 +165,82 @@
                     <div class="form-group mb-3">
                         <textarea class="form-control" name="message" rows="5" placeholder="Enter your message..." required></textarea>
                     </div>
+
+                    <!-- Wiek -->
+                    <div class="mb-4"> <!-- Zwiększony margines na dole dla całej sekcji -->
+                        <p class="text-white-50">Select your age range:</p>
+                        <div class="form-check mb-2"> <!-- Dodatkowy margines na dole każdej opcji -->
+                            <input class="form-check-input" type="radio" name="ageRange" id="ageUnder18" value="under18" required>
+                            <label class="form-check-label text-white-50" for="ageUnder18">
+                                Under 18
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="ageRange" id="age18to25" value="18to25">
+                            <label class="form-check-label text-white-50" for="age18to25">
+                                18 to 25
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="ageRange" id="age26to35" value="26to35">
+                            <label class="form-check-label text-white-50" for="age26to35">
+                                26 to 35
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="ageRange" id="age36andAbove" value="36andAbove">
+                            <label class="form-check-label text-white-50" for="age36andAbove">
+                                36 and above
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Favorite album selection with better layout -->
+                    <div class="mb-3">
+                        <p class="text-white-50">Select your favorite album(s):</p>
+                        <div class="row"> <!-- Dodanie siatki Bootstrapa dla lepszego rozmieszczenia checkboxów -->
+                            <!-- Każda opcja w osobnej kolumnie -->
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumIceland" value="Iceland">
+                                    <label class="form-check-label text-white-50" for="albumIceland">
+                                        Iceland
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumNorway" value="Norway">
+                                    <label class="form-check-label text-white-50" for="albumNorway">
+                                        Norway
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumWinter" value="Winter">
+                                    <label class="form-check-label text-white-50" for="albumWinter">
+                                        Winter
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumCoversVol1" value="Covers Vol.1">
+                                    <label class="form-check-label text-white-50" for="albumCoversVol1">
+                                        Covers Vol.1
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Dodatkowy podział na kolumny dla lepszego wykorzystania przestrzeni -->
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumIntheAutumnForest" value="In The Autumn Forest">
+                                    <label class="form-check-label text-white-50" for="albumIntheAutumnForest">
+                                        In The Autumn Forest
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <!-- Przycisk do wysłania formularza -->
                     <button class="btn btn-primary" type="submit">Send Message</button>
                 </form>
