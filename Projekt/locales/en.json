@@ -1,0 +1,25 @@
+{
+    "welcome": {
+        "subtitle": "Ambient, electronic and acoustic music. Sometimes a singer too.",
+        "button": "Get to know him"
+    },
+    "about": {
+        "title": "Hi, I'm Matt and I make music.",
+        "description": "I make ambient, electronic, acoustic and sometimes alternative music. Playing guitar, bass and piano (and some other funny instruments). If you wanna listen to it, just keep scrolling. Here on this site you can find all of it and listen to it freely."
+    },
+    "albums": {
+        "title": "All of my work",
+        "description": "Feel free to listen to any of it on this site"
+    },
+    "projects": {
+        "title": "My other projects",
+        "description": "See my other music projects and listen to them as well!"
+    },
+    "msg": {
+        "title": "Send me a message!",
+        "age": "Select your age range:",
+        "album": "Select your favorite album(s):",
+        "send": "Send message"
+    }
+  }
+  

@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -51,18 +42,57 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Odczytywanie geolokalizacji i ustalanie języka na podstawie kraju
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const { latitude, longitude } = position.coords;
+            fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyA3cH-xDSjsL38hxB9apy_rHUbkr5vEJRU`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.results && data.results.length > 0) {
+                    const country = data.results[0].address_components.find(comp => comp.types.includes("country")).long_name;
+                    setLanguageBasedOnCountry(country);
+                } else {
+                    throw new Error('No results found in the geolocation response.');
+                }
+            })
+            .catch(error => {
+                console.error('Failed to retrieve location or country:', error);
+                setLanguageBasedOnCountry('default'); // Użyj domyślnego języka w przypadku błędu
+            });
+        }, error => {
+            console.error('Geolocation error:', error);
+            setLanguageBasedOnCountry('default'); // Use default language on geolocation failure
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
+        setLanguageBasedOnCountry('default'); // Use default language if geolocation not supported
+    }
 });
-        // Skrypt JavaScript do zmiany tła w zależności od podstrony
-        // Załóżmy, że mamy zmienne globalne lub inny sposób określania aktualnej podstrony
 
-        // Zakładając, że mamy zmienną currentPage, która zawiera nazwę aktualnej podstrony
-        // Możemy zmienić zmienną CSS w zależności od tej wartości
+// Funkcja zmiany języka strony na podstawie kraju
+function setLanguageBasedOnCountry(country) {
+    const language = (country === 'Poland') ? 'pl' : 'en';
+    loadLanguage(language);
+}
 
-        // Przykład:
-        var currentPage = "home"; // Przykładowa wartość, można ją ustawić na aktualną podstronę
-
-        if (currentPage === "home") {
-            document.documentElement.style.setProperty('--bg-image', 'url("../assets/img/bg-home.jpg")');
-        } else if (currentPage === "about") {
-            document.documentElement.style.setProperty('--bg-image', 'url("../assets/img/bg-about.jpg")');
+// Funkcja załadowania języka
+function loadLanguage(lang) {
+    fetch(`locales/${lang}.json`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        return response.json();
+    })
+    .then(translations => {
+        // Uaktualnij treść elementów na stronie zgodnie z wykrytym językiem
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            el.textContent = translations[key];
+        });
+    })
+    .catch(error => {
+        console.error('Error loading the translation file:', error);
+    });
+}

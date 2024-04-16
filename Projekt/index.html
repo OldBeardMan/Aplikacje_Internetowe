@@ -11,7 +11,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- Core theme CSS-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
@@ -34,13 +34,13 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="front masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center"> <!--Tytułowy baner tytułowy-->
                         <h1 class="mx-auto my-0 text-uppercase">Matt Krupa</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Ambient, electronic and acoustic music. Sometimes a singer too.</h2>
-                        <a class="btn btn-secondary" href="#about">Get to know him</a> <!--Odnośnik do rozwinięcia-->
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5" data-translate="welcome.subtitle">Ambient, electronic and acoustic music. Sometimes a singer too.</h2>
+                        <a class="btn btn-secondary" href="#about" data-translate="welcome.button">Get to know him</a> <!--Odnośnik do rozwinięcia-->
                     </div><!--Odnośnik do rozwinięcia-->
                 </div>
             </div>
@@ -50,8 +50,8 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center"> <!--Wyśrodkowanie-->
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Hi, I'm Matt and I make music.</h2>
-                        <p class="text-white-50">
+                        <h2 class="text-white mb-4" data-translate="about.title">Hi, I'm Matt and I make music.</h2>
+                        <p class="text-white-50"data-translate="about.description">
                             I make ambient, electronic, acoustic and sometimes alternative music. Playing guitar, bass and piano (and some other funny instruments). 
                             If you wanna listen to it, just keep scrolling. Here on this site you can find all of it and listen to it freely.
                         </p>
@@ -67,8 +67,8 @@
         <!-- Albumy tytuł-->
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="mt-0">All of my work</h2>
-                <p class="text-warning">Feel free to listen to any of it on this site</p>
+                <h2 class="mt-0" data-translate="albums.title">All of my work</h2>
+                <p class="text-warning" data-translate="albums.descriptions">Feel free to listen to any of it on this site</p>
                 <hr class="light my-4" /> <!--Tutaj ten pasek odnielający tytuł od albumów-->
             </div>
         </div>
@@ -115,139 +115,117 @@
 <section class="projects-section bg-black text-white" id="projects">
     <div class="container px-4 px-lg-5">
 
-        <!-- Tytuł-->
+        <!-- Tytuł -->
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="mt-0">My other projects</h2>
-                <p class="text-muted">See my other music projects and listen to them as well!</p>
-                <hr class="light my-4" /> <!--Paseczek-->
+                <h2 class="mt-0" data-translate="projects.title">My other projects</h2>
+                <p class="text-muted " data-translate="projects.description">See my other music projects and listen to them as well!</p>
+                <hr class="light my-4" />
             </div>
         </div>
 
-        <!-- Inee projekty -->
-        <div class="row gx-4 gy-4 justify-content-center"> <!--Div dla projektów muzycznych analogicznie jak z albumami-->
-            <div class="col-lg-3 col-md-6 text-center"> <!--Poszczególny projekt-->
-                <a href="iceland" class="album-link"> <!--Odnośnik do podstrony-->
-                    <img class="rounded-circle shadow-4-strong img-fluid album-img" src="assets/img/Iceland.png" alt="Iceland"> <!--Obrazek-->
-                    <h3>Blooming Cactus</h3> <!--Nazwa-->
-                </a>
+        <!-- Carousel dla projektów muzycznych -->
+        <div id="musicProjectsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <a href="iceland" class="album-link">
+                        <img class="rounded-circle shadow-4-strong img-fluid carousel-img" src="assets/img/Iceland.png" alt="Iceland">
+                        <h3>Blooming Cactus</h3>
+                    </a>
+                </div>
+                <div class="carousel-item text-center">
+                    <a href="norway" class="album-link">
+                        <img class="rounded-circle shadow-4-strong img-fluid carousel-img" src="assets/img/Norway.png" alt="Norway">
+                        <h3>Carmelis</h3>
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center"> <!--Div dla innego projektu muzycznego-->
-                <a href="norway" class="album-link">
-                    <img class="rounded-circle shadow-4-strong img-fluid album-img" src="assets/img/Norway.png" alt="Norway">
-                    <h3>Carmelis</h3>
-                </a>
-            </div>
-        </div> 
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#musicProjectsCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#musicProjectsCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
 
     </div>
 </section>
 
 
 
+
 <!-- Wysłanie wiadomości-->
-<section class="signup-section" id="signup">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Send me a message!</h2>
+<section class="signup-section text-white" id="signup">
+    <div class="container px-5 py-5">
+        <div class="row gx-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <i class="far fa-paper-plane fa-2x mb-4"></i>
+                <h2 class="mb-4" data-translate="msg.title">Send me a message!</h2>
                 <form class="form-signup" action="mailto:matt.krupa.info@gmail.com" method="post" enctype="text/plain">
-                    <!-- Imię input -->
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-4">
                         <input class="form-control" type="text" name="name" placeholder="Enter your name..." required>
                     </div>
-                    <!-- Email address input -->
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-4">
                         <input class="form-control" type="email" name="email" placeholder="Enter your email address..." required>
                     </div>
-                    <!-- Treść wiadomości input -->
-                    <div class="form-group mb-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Enter your message..." required></textarea>
+                    <div class="form-group mb-4">
+                        <textarea class="form-control" name="message" rows="4" placeholder="Enter your message..." required></textarea>
                     </div>
-
-                    <!-- Wiek -->
-                    <div class="mb-4"> <!-- Zwiększony margines na dole dla całej sekcji -->
-                        <p class="text-white-50">Select your age range:</p>
-                        <div class="form-check mb-2"> <!-- Dodatkowy margines na dole każdej opcji -->
+                    <div class="mb-4">
+                        <p data-translate="msg.age">Select your age range:</p>
+                        <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="ageRange" id="ageUnder18" value="under18" required>
-                            <label class="form-check-label text-white-50" for="ageUnder18">
-                                Under 18
-                            </label>
+                            <label class="form-check-label" for="ageUnder18">> 18</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="ageRange" id="age18to25" value="18to25">
-                            <label class="form-check-label text-white-50" for="age18to25">
-                                18 to 25
-                            </label>
+                            <label class="form-check-label" for="age18to25">18 - 25</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="ageRange" id="age26to35" value="26to35">
-                            <label class="form-check-label text-white-50" for="age26to35">
-                                26 to 35
-                            </label>
+                            <label class="form-check-label" for="age26to35">26 - 35</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="ageRange" id="age36andAbove" value="36andAbove">
-                            <label class="form-check-label text-white-50" for="age36andAbove">
-                                36 and above
-                            </label>
+                            <label class="form-check-label" for="age36andAbove">36 < </label>
                         </div>
                     </div>
-
-                    <!-- Favorite album selection with better layout -->
-                    <div class="mb-3">
-                        <p class="text-white-50">Select your favorite album(s):</p>
-                        <div class="row"> <!-- Dodanie siatki Bootstrapa dla lepszego rozmieszczenia checkboxów -->
-                            <!-- Każda opcja w osobnej kolumnie -->
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumIceland" value="Iceland">
-                                    <label class="form-check-label text-white-50" for="albumIceland">
-                                        Iceland
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumNorway" value="Norway">
-                                    <label class="form-check-label text-white-50" for="albumNorway">
-                                        Norway
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumWinter" value="Winter">
-                                    <label class="form-check-label text-white-50" for="albumWinter">
-                                        Winter
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumCoversVol1" value="Covers Vol.1">
-                                    <label class="form-check-label text-white-50" for="albumCoversVol1">
-                                        Covers Vol.1
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- Dodatkowy podział na kolumny dla lepszego wykorzystania przestrzeni -->
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumIntheAutumnForest" value="In The Autumn Forest">
-                                    <label class="form-check-label text-white-50" for="albumIntheAutumnForest">
-                                        In The Autumn Forest
-                                    </label>
-                                </div>
-                            </div>
+                    <div class="mb-4">
+                        <p data-translate="msg.album">Select your favorite album(s):</p>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumIceland" value="Iceland">
+                            <label class="form-check-label" for="albumIceland">Iceland</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumNorway" value="Norway">
+                            <label class="form-check-label" for="albumNorway">Norway</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumWinter" value="Winter">
+                            <label class="form-check-label" for="albumWinter">Winter</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumCoversVol1" value="Covers Vol.1">
+                            <label class="form-check-label" for="albumCoversVol1">Covers Vol.1</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="favoriteAlbum[]" id="albumIntheAutumnForest" value="In The Autumn Forest">
+                            <label class="form-check-label" for="albumIntheAutumnForest">In The Autumn Forest</label>
                         </div>
                     </div>
-
 
                     <!-- Przycisk do wysłania formularza -->
-                    <button class="btn btn-primary" type="submit">Send Message</button>
+                    <button class="btn btn-primary" type="submit" data-translate="msg.send">Send Message</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
 
 
         <!--Socjale-->
