@@ -1,25 +1,15 @@
 {
-    "welcome": {
-        "subtitle": "Muzyka ambientowa, elektroniczna i akustyczna. Czasami także sobie śpiewa.",
-        "button": "Poznaj go bliżej"
-    },
-    "about": {
-        "title": "Cześć, jestem Matt i tworzę muzykę.",
-        "description": "Tworzę muzykę ambientową, elektroniczną, akustyczną i czasami alternatywną. Gram na gitarze, basie i pianinie (oraz na kilku innych zabawnych instrumentach). Jeśli chcesz jej posłuchać, po prostu przewiń stronę w dół. Tutaj znajdziesz całą moją muzykę i możesz jejsłuchać za darmo."
-    },
-    "albums": {
-        "title": "Cała moja muzyka",
-        "description": "Posłuchaj sobie jej za darmo na tej stronie!"
-    },
-    "projects": {
-        "title": "Moje inne projekty",
-        "description": "Zobacz moje inne projekty muzyczne!"
-    },
-    "msg": {
-        "title": "Wyślij mi wiadomość!",
-        "age": "Wybierz swój wiek:",
-        "album": "Wybierz swój ulubiony album:",
-        "send": "Wyślij wiadomość!"
-    }
+        "welcomesubtitle": "Muzyka ambientowa, elektroniczna i akustyczna. Czasami także sobie śpiewa.",
+        "welcomebutton": "Poznaj go bliżej",
+        "abouttitle": "Cześć, jestem Matt i tworzę muzykę.",
+        "aboutdescription": "Tworzę muzykę ambientową, elektroniczną, akustyczną i czasami alternatywną. Gram na gitarze, basie i pianinie (oraz na kilku innych zabawnych instrumentach). Jeśli chcesz jej posłuchać, po prostu przewiń stronę w dół. Tutaj znajdziesz całą moją muzykę i możesz jejsłuchać za darmo.",
+        "albumstitle": "Cała moja muzyka",
+        "albumsdescription": "Posłuchaj sobie jej za darmo na tej stronie!",
+        "projectstitle": "Moje inne projekty",
+        "projectsdescription": "Zobacz moje inne projekty muzyczne!",
+        "msgtitle": "Wyślij mi wiadomość!",
+        "msgage": "Wybierz swój wiek:",
+        "msgalbum": "Wybierz swój ulubiony album:",
+        "msgsend": "Wyślij wiadomość!"
   }
   

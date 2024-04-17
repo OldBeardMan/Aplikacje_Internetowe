@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 // Funkcja zmiany języka strony na podstawie kraju
 function setLanguageBasedOnCountry(country) {
-    const language = (country === 'Poland') ? 'pl' : 'en';
+    const language = (country === 'Polska') ? 'pl' : 'en';
     loadLanguage(language);
 }
 
@@ -86,10 +86,9 @@ function loadLanguage(lang) {
         return response.json();
     })
     .then(translations => {
-        // Uaktualnij treść elementów na stronie zgodnie z wykrytym językiem
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.getAttribute('data-translate');
-            el.textContent = translations[key];
+            el.textContent = translations[key] || "Missing translation";
         });
     })
     .catch(error => {
