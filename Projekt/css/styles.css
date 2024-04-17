@@ -11,7 +11,7 @@
   --bs-body-bg: #000000;
   --bs-border-width: 1px;
   --bs-link-color: #64a19d;
-  --bs-link-hover-color: #50817e;
+  --bs-link-hover-color: #b1b1b1;
 }
 
 *,
@@ -1075,6 +1075,11 @@ body {
 .about-section {
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000000 0%, #000000 60%, #7464a1 100%);
+}
+
+.about-section-black {
+  padding-top: 10rem;
+  background: black;
 }
 
 .about-section p {
