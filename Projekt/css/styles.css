@@ -264,6 +264,15 @@ textarea {
   }
 }
 
+#formErrors {
+  color: red;
+  background-color: #ffc0cb; /* Jasny czerwony kolor tła */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: block; /* Ustawienie domyślne na block do testów */
+}
+
 .form-signup {
   background: rgba(255, 255, 255, 0.1); /* Lekko przezroczyste tło */
   padding: 2rem;
@@ -496,6 +505,40 @@ textarea.form-control {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #7464a1;
   --bs-btn-disabled-border-color: #7464a1;
+}
+
+.btn-bc {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a18964;
+  --bs-btn-border-color: #a19364;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #897f55;
+  --bs-btn-hover-border-color: #817650;
+  --bs-btn-focus-shadow-rgb: 137, 123, 175;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #817450;
+  --bs-btn-active-border-color: #796b4b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #a19664;
+  --bs-btn-disabled-border-color: #a18c64;
+}
+
+.btn-carmelis {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a16492;
+  --bs-btn-border-color: #a164a1;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #895585;
+  --bs-btn-hover-border-color: #81507d;
+  --bs-btn-focus-shadow-rgb: 137, 123, 175;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #815081;
+  --bs-btn-active-border-color: #754b79;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #a164a1;
+  --bs-btn-disabled-border-color: #a164a1;
 }
 
 .collapse:not(.show) {
@@ -1016,7 +1059,33 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-autumn.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-winter.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.carmelis {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-carmelis.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.bc {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-bc.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

@@ -1,15 +1,17 @@
 {
-        "welcomesubtitle": "Ambient, electronic and acoustic music. Sometimes a singer too.",
-        "welcomebutton": "Get to know him",
-        "abouttitle": "Hi, I'm Matt and I make music.",
-        "aboutdescription": "I make ambient, electronic, acoustic and sometimes alternative music. Playing guitar, bass and piano (and some other funny instruments). If you wanna listen to it, just keep scrolling. Here on this site you can find all of it and listen to it freely.",
-        "albumstitle": "All of my work",
-        "albumsdescription": "Feel free to listen to any of it on this site",
-        "projectstitle": "My other projects",
-        "projectsdescription": "See my other music projects and listen to them as well!",
-        "msgtitle": "Send me a message!",
-        "msgage": "Select your age range:",
-        "msgalbum": "Select your favorite album(s):",
-        "msgsend": "Send message"
+
+            "welcomesubtitle": "Ambient, electronic and acoustic music. Sometimes a singer too.",
+            "welcomebutton": "Get to know him",
+            "abouttitle": "Hi, I'm Matt and I make music.",
+            "aboutdescription": "I make ambient, electronic, acoustic and sometimes alternative music. Playing guitar, bass and piano (and some other funny instruments). If you wanna listen to it, just keep scrolling. Here on this site you can find all of it and listen to it freely.",
+            "albumstitle": "All of my work",
+            "albumsdescription": "Feel free to listen to any of it on this site",
+            "projectstitle": "My other projects",
+            "projectsdescription": "See my other music projects and listen to them as well!",
+            "msgtitle": "Send me a message!",
+            "msgcountry": "Wybierz swój kraj",
+            "msgage": "Select your age range:",
+            "msgalbum": "Select your favorite album(s):",
+            "msgsend": "Send message"
   }
   

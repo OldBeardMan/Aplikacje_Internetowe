@@ -95,3 +95,26 @@ function loadLanguage(lang) {
         console.error('Error loading the translation file:', error);
     });
 }
+
+//formularz
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const form = this;
+
+    // Zbieranie danych z formularza
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+        ageRange: form.querySelector('input[name="ageRange"]:checked') ? form.querySelector('input[name="ageRange"]:checked').value : '',
+        country: form.country.value,
+        favoriteAlbums: Array.from(form['favoriteAlbum[]']).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value)
+    };
+
+    // Zapisywanie danych do localStorage
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    // Wyświetlanie komunikatu o sukcesie i resetowanie formularza
+    alert('Your message has been saved successfully!');
+    form.reset();
+});
