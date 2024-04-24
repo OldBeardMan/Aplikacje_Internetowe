@@ -15,14 +15,12 @@
 /* Podstawowe stylizacje dla całego ciała dokumentu, włączając czcionkę, kolor tła, itp. */
 body {
   margin: 0;
-  font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: "Nunito", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
   background-color: #000000;
-  -webkit-text-size-adjust: 100%; /* Zapobiega zmianom rozmiaru tekstu w Safari */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Usuwa efekt podświetlenia przy dotykaniu na iOS */
 }
 
 /* Styl dla linii poziomej (hr), ustawiający przeźroczystość, kolory i marginesy */
@@ -242,9 +240,7 @@ textarea {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none; /* Blokuje zaznaczanie tekstu w przycisku */
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none; /*żeby nie można było zaznaczyć tekstu w przycisku*/
   border: 1px solid var(--bs-btn-border-color);
   border-radius: 0.375rem;
   background-color: var(--bs-btn-bg);
@@ -616,7 +612,7 @@ body {
 }
 /* Styl dla elementów nawigacyjnych przy najechaniu */
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#000000, 80%);
+  color: rgba(0, 0, 0, 0.8);
   outline: none;
   background-color: transparent;
 }
@@ -695,7 +691,7 @@ body {
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important; /* cień dla przycisku */
   padding: 1.25rem 2rem; /* padding przycisku */
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* rodzina czcionek */
+  font-family: "Varela Round", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* rodzina czcionek */
   font-size: 80%; /* rozmiar czcionki */
   text-transform: uppercase; /* wielkie litery */
   letter-spacing: 0.15rem; /* odstęp między literami */
@@ -752,7 +748,7 @@ body {
 
 /* Styl dla nagłówków w sekcji masthead, zastosowanie gradientów dla tekstu */
 .masthead h1, .masthead .h1, .masthead h2, .masthead .h2 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* rodzina czcionek */
+  font-family: "Varela Round", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* rodzina czcionek */
 }
 
 .masthead h1, .masthead .h1 {
@@ -761,8 +757,7 @@ body {
   letter-spacing: 0.8rem; /* odstęp między literami */
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)); /* gradient dla tekstu */
   -webkit-text-fill-color: transparent; /* przezroczysty kolor tekstu */
-  -webkit-background-clip: text; /* tło ograniczone do tekstu */
-          background-clip: text;
+  background-clip: text;
 }
 
 .masthead h2, .masthead .h2 {
@@ -986,7 +981,7 @@ body {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important; /* Dodaje cień do elementów input */
   padding: 1.25rem 2rem; /* Dostosowuje wewnętrzne wypełnienie elementów input */
   height: auto; /* Wysokość input ustawiona na auto */
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Definiuje rodzinę czcionek dla input */
+  font-family: "Varela Round", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Definiuje rodzinę czcionek dla input */
   font-size: 80%; /* Ustawia rozmiar czcionki na 80% wartości dziedziczonej */
   text-transform: uppercase; /* Tekst w input zostaje przekształcony na wielkie litery */
   letter-spacing: 0.15rem; /* Dostosowuje odstępy między literami */
@@ -1015,6 +1010,7 @@ body {
 }
 
 .form-control, .form-check-input {
+  appearance: none;
   background-color: rgba(255, 255, 255, 0.8); /* Lekko przezroczyste tło dla kontrolek formularza */
   border: 0; /* Brak obramowania */
   border-radius: 0.375rem; /* Zaokrąglenie rogów */
@@ -1059,7 +1055,8 @@ textarea.form-control {
 }
 
 .form-check {
-  display: block; /* Kontrolki form-check są blokowe */
+  display: flex; /* Kontrolki form-check są blokowe */
+  align-items: center;
   min-height: 1.5rem; /* Minimalna wysokość */
   padding-left: 1.5em; /* Lewe wypełnienie */
   margin-bottom: 0.125rem; /* Margines dolny */
@@ -1070,10 +1067,10 @@ textarea.form-control {
 }
 
 .form-check-input {
-  width: 1em; /* Szerokość */
-  height: 1em; /* Wysokość */
-  margin-top: 0.25em; /* Górny margines */
-  vertical-align: top; /* Wyrównanie pionowe */
+  width: 1rem; /* Szerokość */
+  height: 1rem; /* Wysokość */
+  margin-top: 0.25rem; /* Górny margines */
+  vertical-align: middle; /* Wyrównanie pionowe */
   background-color: #fff; /* Kolor tła */
   background-repeat: no-repeat; /* Tło nie powtarza się */
   background-position: center; /* Tło wyśrodkowane */
@@ -1081,7 +1078,7 @@ textarea.form-control {
   border: 1px solid rgba(0, 0, 0, 0.25); /* Obramowanie */
 }
 .form-check-input[type=checkbox] {
-  border-radius: 0.25em; /* Zaokrąglenie rogów dla checkbox */
+  border-radius: 0.25rem; /* Zaokrąglenie rogów dla checkbox */
 }
 .form-check-input[type=radio] {
   border-radius: 50%; /* Okrągłe rogi dla radio */
@@ -1096,7 +1093,7 @@ textarea.form-control {
 }
 .form-check-input:checked {
   background-color: #64a19d; /* Kolor tła po zaznaczeniu */
-  border-color: #64a19d; /* Kolor obramowania po zaznaczeniu */
+  border-color: #5a8d89; /* Kolor obramowania po zaznaczeniu */
 }
 .form-check-input:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e"); 
@@ -1108,7 +1105,7 @@ textarea.form-control {
 }
 .form-check-input[type=checkbox]:indeterminate {
   background-color: #64a19d; /* Kolor tła dla stanu nieokreślonego */
-  border-color: #64a19d; /* Kolor obramowania dla stanu nieokreślonego */
+  border-color: #5a8d89; /* Kolor obramowania dla stanu nieokreślonego */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e"); /* Obraz tła dla stanu nieokreślonego */
 }
 
