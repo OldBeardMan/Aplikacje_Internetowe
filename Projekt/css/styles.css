@@ -1,3 +1,7 @@
+/*------------------------------------------*/
+/* STYLE UŻYWANE W RÓŻNYCH SEKCJACH STRONY */
+/*------------------------------------------*/
+
 /* Ustawienie box-sizing na border-box dla wszystkich elementów, co ułatwia zarządzanie rozmiarami */
 *,
 *::before,
@@ -21,6 +25,12 @@ body {
   line-height: 1.5;
   color: #212529;
   background-color: #000000;
+  letter-spacing: 0.0625em;
+}
+
+/* Ustawia padding przy przewijaniu, aby treść nie była zasłaniana przez pasek nawigacyjny */
+html {
+  scroll-padding-top: calc(4.5rem - 1px);
 }
 
 /* Styl dla linii poziomej (hr), ustawiający przeźroczystość, kolory i marginesy */
@@ -33,7 +43,7 @@ hr {
 }
 
 /* Stylizacje dla nagłówków, definiujące marginesy, grubość czcionki i wysokość linii */
-h3, .h3, h2, .h2, h1, .h1 {
+h3, h2, h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -41,31 +51,31 @@ h3, .h3, h2, .h2, h1, .h1 {
 }
 
 /* Zmienne rozmiary czcionek dla h1 w zależności od szerokości ekranu */
-h1, .h1 {
+h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
-  h1, .h1 {
+  h1 {
     font-size: 2.5rem;
   }
 }
 
 /* Zmienne rozmiary czcionek dla h2 */
-h2, .h2 {
+h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2 {
+  h2 {
     font-size: 2rem;
   }
 }
 
 /* Zmienne rozmiary czcionek dla h3 */
-h3, .h3 {
+h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
-  h3, .h3 {
+  h3 {
     font-size: 1.75rem;
   }
 }
@@ -81,11 +91,6 @@ ul {
   padding-left: 2rem;
   margin-top: 0;
   margin-bottom: 1rem;
-}
-
-/* Stylizacje dla mniejszej czcionki */
-small, .small {
-  font-size: 0.875em;
 }
 
 /* Styl dla linków, ustawia kolor oraz wyłącza podkreślenie */
@@ -203,17 +208,7 @@ textarea {
 }
 
 /* Styl dla kolumn w odpowiedzi na szerokość ekranu, definiuje flex i szerokość */
-@media (min-width: 768px) {
-  .col-md-6 {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-}
 @media (min-width: 992px) {
-  .col-lg-3 {
-    flex: 0 0 auto;
-    width: 25%;
-  }
   .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
@@ -262,28 +257,8 @@ textarea {
   border-color: var(--bs-btn-active-border-color);
 }
 
-
-/* Style dla przycisków typu primary */
-.btn-primary {
-  --bs-btn-color: #fff;  /* kolor tekstu */
-  --bs-btn-bg: #64a19d;  /* kolor tła */
-  --bs-btn-border-color: #64a19d;  /* kolor obramowania */
-  --bs-btn-hover-color: #fff;  /* kolor tekstu po najechaniu */
-  --bs-btn-hover-bg: #558985;  /* kolor tła po najechaniu */
-  --bs-btn-hover-border-color: #50817e;  /* kolor obramowania po najechaniu */
-  --bs-btn-focus-shadow-rgb: 123, 175, 172;  /* kolor cienia przy fokusie */
-  --bs-btn-active-color: #fff;  /* kolor tekstu w stanie aktywnym */
-  --bs-btn-active-bg: #50817e;  /* kolor tła w stanie aktywnym */
-  --bs-btn-active-border-color: #4b7976;  /* kolor obramowania w stanie aktywnym */
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);  /* cień w stanie aktywnym */
-  --bs-btn-disabled-color: #fff;  /* kolor tekstu w stanie wyłączonym */
-  --bs-btn-disabled-bg: #64a19d;  /* kolor tła w stanie wyłączonym */
-  --bs-btn-disabled-border-color: #64a19d;  /* kolor obramowania w stanie wyłączonym */
-}
-
-/* Inne rodzaje przycisków analogicznie do primary*/
-
-.btn-secondary {
+/*styl dla głównego przycisku, inne style znajdują się w sekcjach*/
+.btn-main {
   --bs-btn-color: #fff;
   --bs-btn-bg: #7464a1;
   --bs-btn-border-color: #7464a1;
@@ -300,39 +275,128 @@ textarea {
   --bs-btn-disabled-border-color: #7464a1;
 }
 
-.btn-bc {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #a18964;
-  --bs-btn-border-color: #a19364;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #897f55;
-  --bs-btn-hover-border-color: #817650;
-  --bs-btn-focus-shadow-rgb: 137, 123, 175;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #817450;
-  --bs-btn-active-border-color: #796b4b;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #a19664;
-  --bs-btn-disabled-border-color: #a18c64;
+/* Styl dla ustawienia wyświetlania elementów jako flex */
+.d-flex {
+  display: flex !important;
 }
 
-.btn-carmelis {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #a16492;
-  --bs-btn-border-color: #a164a1;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #895585;
-  --bs-btn-hover-border-color: #81507d;
-  --bs-btn-focus-shadow-rgb: 137, 123, 175;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #815081;
-  --bs-btn-active-border-color: #754b79;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #a164a1;
-  --bs-btn-disabled-border-color: #a164a1;
+/* Wyśrodkowanie zawartości elementu w poziomie */
+.justify-content-center {
+  justify-content: center !important;
 }
+
+/* Wyrównanie zawartości elementu do środka w pionie */
+.align-items-center {
+  align-items: center !important;
+}
+
+/* Ustawienie marginesów poziomych */
+.mx-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+/* Automatyczne marginesy poziome, wyśrodkowuje element */
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* Usuwa marginesy pionowe */
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Ustawienie marginesów pionowych */
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Usuwa górny margines */
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+/* Ustawia górny margines na 0.5 rem */
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+/* Ustawia dolny margines na 0.5 rem */
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ustawia dolny margines na 1.5 rem */
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Ustawia dolny margines na 3 rem */
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+/* Automatyczny margines po lewej stronie, służący do wyrównywania elementu do prawej strony kontenera */
+.ms-auto {
+  margin-left: auto !important;
+}
+
+/* Ustawia poziome paddingi na 1.5 rem */
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+/* Centruje tekst */
+.text-center {
+  text-align: center !important;
+}
+
+/* Zamienia tekst na wielkie litery */
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+/* Ustawia kolor tekstu na biały */
+.text-white {
+  color: rgba(255, 255, 255) !important;
+}
+
+/* Ustawia kolor tekstu na szary */
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Ustawia kolor tekstu na półprzezroczysty biały */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Ustawia kolor tła na kolor drugorzędny (secondary) */
+.bg-secondary {
+  background-color: rgba(116, 100, 161) !important;
+}
+
+/* Ustawia kolor tła na czarny */
+.bg-black {
+  background-color: rgba(0, 0, 0) !important;
+}
+
+/* Ustawia większe poziome paddingi na dużych ekranach */
+@media (min-width: 992px) {
+  .px-lg-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+}
+
+
+/*-----------------------------*/
+/* SEKCJA Z PASKIEM NAWIGACYJNYM */
+/*-----------------------------*/
 
 /* Ukrywanie zawartości niepokazywanej (domyślnie nie rozwiniętej) */
 .collapse:not(.show) {
@@ -443,149 +507,6 @@ textarea {
   right: 0;
   left: 0;
   z-index: 1030;
-}
-
-/* Styl dla ustawienia wyświetlania elementów jako flex */
-.d-flex {
-  display: flex !important;
-}
-
-/* Ustawienie wysokości elementu na 100% */
-.h-100 {
-  height: 100% !important;
-}
-
-/* Wyśrodkowanie zawartości elementu w poziomie */
-.justify-content-center {
-  justify-content: center !important;
-}
-
-/* Wyrównanie zawartości elementu do środka w pionie */
-.align-items-center {
-  align-items: center !important;
-}
-
-/* Ustawienie marginesów poziomych */
-.mx-2 {
-  margin-right: 0.5rem !important;
-  margin-left: 0.5rem !important;
-}
-
-/* Automatyczne marginesy poziome, wyśrodkowuje element */
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
-
-/* Usuwa marginesy pionowe */
-.my-0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* Ustawienie marginesów pionowych */
-.my-4 {
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-}
-
-/* Usuwa górny margines */
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-/* Ustawia górny margines na 0.5 rem */
-.mt-2 {
-  margin-top: 0.5rem !important;
-}
-
-/* Ustawia dolny margines na 0.5 rem */
-.mb-2 {
-  margin-bottom: 0.5rem !important;
-}
-
-/* Ustawia dolny margines na 1.5 rem */
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-
-/* Ustawia dolny margines na 3 rem */
-.mb-5 {
-  margin-bottom: 3rem !important;
-}
-
-/* Automatyczny margines po lewej stronie, służący do wyrównywania elementu do prawej strony kontenera */
-.ms-auto {
-  margin-left: auto !important;
-}
-
-/* Ustawia poziome paddingi na 1.5 rem */
-.px-4 {
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
-}
-
-/* Centruje tekst */
-.text-center {
-  text-align: center !important;
-}
-
-/* Zamienia tekst na wielkie litery */
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-/* Ustawia kolor tekstu na biały */
-.text-white {
-  color: rgba(255, 255, 255) !important;
-}
-
-/* Ustawia kolor tekstu na szary */
-.text-muted {
-  color: #6c757d !important;
-}
-
-/* Ustawia kolor tekstu na półprzezroczysty biały */
-.text-white-50 {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* Ustawia kolor tła na kolor drugorzędny (secondary) */
-.bg-secondary {
-  background-color: rgba(116, 100, 161) !important;
-}
-
-/* Ustawia kolor tła na czarny */
-.bg-black {
-  background-color: rgba(0, 0, 0) !important;
-}
-
-/* Ustawia zaokrąglenie obramowania elementu na 50% (krąg) */
-.rounded-circle {
-  border-radius: 50% !important;
-}
-
-/* Ustawia większe poziome paddingi na dużych ekranach */
-@media (min-width: 992px) {
-  .px-lg-5 {
-    padding-right: 3rem !important;
-    padding-left: 3rem !important;
-  }
-}
-
-
-/*-----------------------------*/
-/* SEKCJA Z PASKIEM NAWIGACYJNYM */
-/*-----------------------------*/
-
-/* Ustawia padding przy przewijaniu, aby treść nie była zasłaniana przez pasek nawigacyjny */
-html {
-  scroll-padding-top: calc(4.5rem - 1px);
-}
-
-/* Ustawia odstępy między znakami w całym dokumencie */
-body {
-  letter-spacing: 0.0625em;
 }
 
 /* Styl dla głównego paska nawigacyjnego */
@@ -746,6 +667,47 @@ body {
   background-size: cover; /* rozciągnięcie tła na całą dostępną przestrzeń */
 }
 
+/* Style dla przycisków na stronach innych projektów, aby pasowały kolorystycznie*/
+
+.btn-bc {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a18964;
+  --bs-btn-border-color: #a19364;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #897f55;
+  --bs-btn-hover-border-color: #817650;
+  --bs-btn-focus-shadow-rgb: 137, 123, 175;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #817450;
+  --bs-btn-active-border-color: #796b4b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #a19664;
+  --bs-btn-disabled-border-color: #a18c64;
+}
+
+.btn-carmelis {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a16492;
+  --bs-btn-border-color: #a164a1;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #895585;
+  --bs-btn-hover-border-color: #81507d;
+  --bs-btn-focus-shadow-rgb: 137, 123, 175;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #815081;
+  --bs-btn-active-border-color: #754b79;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #a164a1;
+  --bs-btn-disabled-border-color: #a164a1;
+}
+
+/* Ustawienie wysokości elementu na 100% */
+.h-100 {
+  height: 100% !important;
+}
+
 /* Styl dla nagłówków w sekcji masthead, zastosowanie gradientów dla tekstu */
 .masthead h1, .masthead .h1, .masthead h2, .masthead .h2 {
   font-family: "Varela Round", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* rodzina czcionek */
@@ -813,6 +775,20 @@ body {
 /*-----------------------------*/
 /* SEKCJA Z ALBUMAMI */
 /*-----------------------------*/
+
+/*Zrobienie kolumn z obrazkami albumów*/
+@media (min-width: 768px) {
+  .col-album {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col-album {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
 
 /* Styl dla obrazków, które mają być responsywne */
 .img-fluid {
@@ -968,6 +944,24 @@ body {
 /*SEKCJA Z FORMULARZEM*/
 /*-----------------------------*/
 
+/* Style dla przycisków typu primary na zmiennych dla ułatwienia i przejżystości */
+.btn-form {
+  --bs-btn-color: #fff;  /* kolor tekstu */
+  --bs-btn-bg: #64a19d;  /* kolor tła */
+  --bs-btn-border-color: #64a19d;  /* kolor obramowania */
+  --bs-btn-hover-color: #fff;  /* kolor tekstu po najechaniu */
+  --bs-btn-hover-bg: #558985;  /* kolor tła po najechaniu */
+  --bs-btn-hover-border-color: #50817e;  /* kolor obramowania po najechaniu */
+  --bs-btn-focus-shadow-rgb: 123, 175, 172;  /* kolor cienia przy fokusie */
+  --bs-btn-active-color: #fff;  /* kolor tekstu w stanie aktywnym */
+  --bs-btn-active-bg: #50817e;  /* kolor tła w stanie aktywnym */
+  --bs-btn-active-border-color: #4b7976;  /* kolor obramowania w stanie aktywnym */
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);  /* cień w stanie aktywnym */
+  --bs-btn-disabled-color: #fff;  /* kolor tekstu w stanie wyłączonym */
+  --bs-btn-disabled-bg: #64a19d;  /* kolor tła w stanie wyłączonym */
+  --bs-btn-disabled-border-color: #64a19d;  /* kolor obramowania w stanie wyłączonym */
+}
+
 .signup-section {
   padding: 10rem 0; /* Dostosowuje górną i dolną wypełnienie sekcji do 10 rem */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg"); /* Gradient na tle oraz obraz tła */
@@ -1112,6 +1106,11 @@ textarea.form-control {
 /*-----------------------------*/
 /*SEKCJA ZE STOPKĄ I LINKAMI*/
 /*-----------------------------*/
+
+/* Stylizacje dla mniejszej czcionki */
+.small {
+  font-size: 0.875em;
+}
 
 .contact-section {
   padding-top: 5rem; /* Dodaje górną wypełnienie sekcji kontaktowej wynoszące 5 rem */
