@@ -1,0 +1,14 @@
+{
+  "name": "matt-krupa-net",
+  "version": "1.0.0",
+  "description": "Web app for streaming my music and informations.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Mateusz Krupa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
